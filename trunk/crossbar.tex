@@ -1,0 +1,70 @@
+\documentclass[9pt,twocolumn]{IEEEtran}
+
+%\usepackage{pdfsync}
+%\usepackage{epsfig}
+\usepackage{boxedminipage}
+%\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{comment}
+%\usepackage{bibspacing}
+\usepackage{cite}
+\pagestyle{plain}
+%\linespread{1.3}
+%\usepackage{times}
+%\usepackage[sort]{natbib}
+\usepackage{graphicx}
+
+\usepackage{blindtext}
+\usepackage{etoolbox}
+
+\makeatletter
+\def\do#1{\patchcmd{#1}{\thepage}{\null}{}{\GenericWarning{}{Could not patch \string#1}}}
+\docsvlist{\@oddhead,\@evenhead,\ps@headings,\ps@IEEEtitlepagestyle,\ps@IEEEpeerreviewcoverpagestyle}
+\makeatother
+
+\renewcommand{\figurename}{Figure}
+
+\newcommand{\squishlist}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{0pt}
+      \setlength{\topsep}{0pt}       \setlength{\partopsep}{0pt}
+      \setlength{\listparindent}{-2pt}
+      \setlength{\itemindent}{-5pt}
+      %\setlength{\itemindent}{10pt}
+      \setlength{\leftmargin}{1em} \setlength{\labelwidth}{0em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishlistindent}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{0pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\listparindent}{-2pt}
+      %\setlength{\itemindent}{-5pt}
+      \setlength{\itemindent}{20pt}
+      \setlength{\leftmargin}{1em} \setlength{\labelwidth}{0em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+    \end{list}  }
+
+\begin{document}
+\title{\huge\vspace{-0pt} Design Trade-Offs for High Density Cross-Point Resistive Memory}
+\maketitle \vspace{-20pt}
+\input{intro}
+\input{preliminary}
+\input{model}
+\input{w_and_r}
+\input{scale}
+\input{conclusion}
+\vspace{5pt}
+\bibliographystyle{ieeetran}
+\bibliography{./bib/crossbar,./bib/memristor,./bib/mis,./bib/ReRAM}
+\vspace{5pt}
+%\end{spacing}
+%\end{scriptsize}
+\vspace{10pt}
+\appendix[\vspace{10pt}Details of ReRAM Cross-Point Modeling]
+\vspace{10pt}
+\input{appendix}
+
+\end{document}
