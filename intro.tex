@@ -3,20 +3,20 @@ With conventional memory technologies approaching their scaling limit,
 emerging non-volatile memory technologies have attracted increasing%considerable
 attention because of their non-volatility, high access speed, low power
 consumption, and good scalability. Resistive RAM (ReRAM), with its simple
-structure, small cell size ($4F^2$), and the support for 3D stacking, has been
-a promising candidate among emerging memory technologies.
-A key advantage of ReRAM
-comes from its non-linear nature, which enables  cross-point
-RAM array structures without having a dedicated access transistor for each cell. While
-cross-point design is effective in improving the memory density, it has
-inherent disadvantages which introduce extra design challenges. Based on
-the device characteristics, we propose a
-mathematical model to perform a comprehensive analysis of issues of
-reliability, energy consumption, and area overhead for the cross-point array structure. In addition to the
-cell-level analysis, different programming schemes are also discussed in
-this paper. The proposed model enables designers to identify the most
-energy/area efficient ReRAM organization and cell parameters that meet
-specific design goals during the early design stage.
+structure, small cell size ($4F^2$), and the support for 3D stacking, has
+been a promising candidate among emerging memory technologies. A key
+advantage of ReRAM comes from its non-linear nature, which enables
+cross-point ReRAM array structures without having a dedicated access
+transistor for each cell. While cross-point design is effective in
+improving the memory density, it has inherent disadvantages which
+introduce extra design challenges. Based on the device characteristics, we
+perform a comprehensive analysis of issues of reliability, energy
+consumption, area overhead, and performance for the cross-point array
+structure. In addition to the cell-level analysis, different programming
+schemes are also discussed in this paper. The simulation results enable
+designers to identify the most performance/energy/area efficient ReRAM
+organization and cell parameters that meet specific design goals during
+the early design stage.
 \end{abstract}
 
 %\vspace{10pt}
@@ -29,47 +29,49 @@ widely studied as potential candidates for the next generation memory
 technologies to meet the requirement of higher density, faster access
 time, and lower power consumption. Among all of these emerging memory
 technologies, ReRAM has many unique characteristics, including simple
-structure, non-linearity,  and high resistance ratio, making itself one of
+structure, nonlinearity, and high resistance ratio, making itself one of
 the most promising technologies. Researchers have shown that the
 state-of-the-art single-level-cell ReRAM can achieve $7.2ns$ random access
 time for both read and write operations with a resistance ratio larger
 than 100~\cite{ReRAM_ISSCC2011_Sheu}. Also, HP labs and Hynix have already
-announced plans to commercialize memristor-based ReRAM and predicted
-that ReRAM could eventually replace traditional memory
+announced plans to commercialize memristor-based ReRAM and predicted that
+ReRAM could eventually replace traditional memory
 technologies~\cite{memristor:HpHynix}.
 
 Unlike other non-volatile memory technologies, ReRAM can be implemented in
-a cross-point style structure without any access device. Specifically, in
-a nano cross-point array, each bistable ReRAM cell is sandwiched by two
+a cross-point style structure without any access
+device~\cite{crossbar_unity,crossbar_Panasonic}. Specifically, in a nano
+cross-point array, each bistable ReRAM cell is sandwiched by two
 orthogonal nanowires. Thus the area occupied by each cell is $4F^2$ per
 bit. However, the simplicity of the access-device-free, cross-point
 structure introduces challenges to the peripheral circuit and memory
-organization design.
-
-While there have been prior studies on cross-point ReRAM
-arrays~\cite{crossbar_NANO2002_Ziegler,crossbar_NANO08_Flocke,crossbar_TED_2010,crossbar_NANO2003_Ziegler},
+organization design. While there have been prior studies on cross-point
+ReRAM
+arrays~\cite{crossbar_NANO2002_Ziegler,crossbar_NANO08_Flocke,crossbar_TED_2010,crossbar_NANO2003_Ziegler,2011_sb},
 they do not consider the effect of voltage drivers and programming methods
-on the array. In addition, detailed area and energy analysis is also
-absent. In this work, we address the design challenges of cross-point
-structure based ReRAM. We build an accurate mathematical model to evaluate
+on the array. In addition, detailed area, energy, and performance analysis
+is also absent. In this work, we address the design challenges of
+cross-point structure based ReRAM. We use a mathematical model to evaluate
 memory reliability, energy consumption, and area overhead for different
 designs and cell parameters. The advantages of nonlinearity $K_r$ and
-write current $I_w$ scaling are all discussed in detail. Our study allows
-for exploring the most energy/area efficient ReRAM design with different
-design constraints and cell parameters at the very beginning of the design
-stage. Moreover, system designers can also leverage the proposed
-model to provide valuable feedback to device researchers who will in turn
-adjust ReRAM cell design. We believe that this kind of collaboration will
-be very helpful to shorten the time to market of ReRAM memory.
+write current $I_w$ scaling are all discussed in detail. In addition, the
+simulation results of area, energy, and write throughput trade-offs are
+presented. Our study allows for exploring the most energy/area efficient
+ReRAM design with different design constraints and cell parameters at the
+very beginning of the design stage. Moreover, system designers can also
+leverage the proposed model to provide valuable feedback to device
+researchers who will in turn adjust ReRAM cell design. We believe that
+this kind of collaboration will be very helpful to shorten the time to
+market of ReRAM memory.
 
-The rest of this paper is organized as follows. In
-Section~\ref{sec:preliminary}, an overview of ReRAM technology and
-cross-point architectures is given. Section~\ref{sec:model} % Section~III
-discusses the proposed mathematical model for the cross-point structure
-ReRAM and the edge conditions for different write and read schemes.
-Section~\ref{sec:w_and_r} analyzes different design constraints of write
-and read operations on cross-point based ReRAM arrays. The energy
-consumption and area overheads are also analyzed in this section. Then in
-Section~\ref{sec:scale}, the effect of nonlinearity and write current on
-the design constraints is evaluated. Finally, the conclusion is presented
-in Section~\ref{sec:conclusion}.
+%The rest of this paper is organized as follows. In
+%Section~\ref{sec:preliminary}, an overview of ReRAM technology and
+%cross-point architectures is given. Section~\ref{sec:model} % Section~III
+%discusses the proposed mathematical model for the cross-point structure
+%ReRAM and the edge conditions for different write and read schemes.
+%Section~\ref{sec:w_and_r} analyzes different design constraints of write
+%and read operations on cross-point based ReRAM arrays. The energy
+%consumption and area overheads are also analyzed in this section. Then in
+%Section~\ref{sec:scale}, the effect of nonlinearity and write current on
+%the design constraints is evaluated. Finally, the conclusion is presented
+%in Section~\ref{sec:conclusion}.
