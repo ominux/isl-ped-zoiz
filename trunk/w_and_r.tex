@@ -2,8 +2,10 @@
 \section{Analysis of Design Constraints - A Case Study}\label{sec:w_and_r}
 
 In this section, we study the effect of various schemes on cross-point
-ReRAM arrays in detail by using our model. Specifically, we
-evaluate the design constraints on array size, energy consumption and area overhead in worst case scenarios. The results of this study will be useful when designing a cross-point array.
+ReRAM arrays in detail. Specifically, we evaluate the design constraints
+on array size, energy consumption and area overhead in worst case
+scenarios. The results of this study will be useful when designing a
+cross-point array.
 
 \vspace{-10pt}
 \subsection{Overview}
@@ -221,18 +223,18 @@ HWFB and FWHB schemes have the same minimum driven voltage.
 \end{figure}
 
 However, boosting the driven voltage also introduces other potential
-problems for the array design. In particular, increasing the driven voltage will
-increase the voltage applied at unselected cells. Therefore, a write
-disturbance may occur when the voltage applied at an unselected cell
-exceeds the threshold voltage for SET or RESET operation. Specifically,
-the maximum voltage applied at unselect cells is exactly the same as half
-of the driven voltage. Thus, only arrays with driven voltage less than 4V
-are allowable. Otherwise, the array is unreliable because it cannot avoid
-write failure and write disturbance at the same time. The unreliable array
-sizes are denoted as red bars in Figure~\ref{fig:worst_v}. The array size
-limitation provided by Figure~\ref{fig:worst_v} is a hard constraint, and
-all of the following energy and area tradeoffs are bounded by this
-constraint.
+problems for the array design. In particular, increasing the driven
+voltage will increase the voltage applied at unselected cells. Therefore,
+a write disturbance may occur when the voltage applied at an unselected
+cell exceeds the threshold voltage for SET or RESET operation.
+Specifically, the maximum voltage applied at unselect cells is exactly the
+same as half of the driven voltage. Thus, only arrays with driven voltage
+less than 4V are allowable. Otherwise, the array is unreliable because it
+cannot avoid write failure and write disturbance at the same time. The
+unreliable array sizes are denoted as red bars in
+Figure~\ref{fig:worst_v}. The array size limitation provided by
+Figure~\ref{fig:worst_v} is a hard constraint, and all of the following
+energy and area trade-offs are bounded by this constraint.
 
 
 %Figure~\ref{fig:half} shows the maximum voltage applied at unselected
