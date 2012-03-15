@@ -10,18 +10,21 @@
   \caption{The maximum array size with different nonlinearity coefficients.}\label{fig:non_linear}
 \end{figure}
 One of the most distinct features of ReRAM is its nonlinearity. Normally,
-the $K_r(p,V)$ value for memristor-based ReRAM is larger than 20, meaning
-that the resistance of a half-biased cell is at least 10 times larger than a full-biased cell. Clearly, ReRAM cells with larger nonlinearity
+the $K_r$ value for memristor-based ReRAM is larger than 20, meaning that
+the resistance of a half-biased cell is at least 10 times larger than a
+full-biased cell. Clearly, ReRAM cells with larger nonlinearity
 coefficients result in a better memory cell since the sneak current in
 half selected cells will be significantly reduced. In addition, the
 increased resistance at half-selected and unselected cells can also
-mitigate the voltage drop along the activated wordline and bitline.
-Also, we find that the cross-point array design can benefit from
-the scaling of the write current. Figure~\ref{fig:non_linear} shows the
-influence of different nonlinearity coefficients and write currents on the array size requirements for a single-bit HWHB writing scheme. This figure
-shows that the array size limitation is relaxed as the nonlinearity
-increases or the write current scales. As we can see from the figure, the maximum array size exceeds $1024\times 1024$ when we have a nonlinearity
-of $30$, together with a write current of $40\mu A$.
+mitigate the voltage drop along the activated wordline and bitline. Also,
+we find that the cross-point array design can benefit from the scaling of
+the write current. Figure~\ref{fig:non_linear} shows the influence of
+different nonlinearity coefficients and write currents on the array size
+requirements for a single-bit HWHB writing scheme. This figure shows that
+the array size limitation is relaxed as the nonlinearity increases or the
+write current scales. As we can see from the figure, the maximum array
+size exceeds $1024\times 1024$ when we have a nonlinearity of $30$,
+together with a write current of $40\mu A$.
 
 Moreover, the increase of nonlinearity or scaling of write current can
 also reduce the energy consumption and area overhead of the cross-point
@@ -29,7 +32,7 @@ array. As shown in Figure~\ref{fig:E_and_A}(a), for a $512 \times 512$
 array, the energy consumption for the write operation decreases
 dramatically with the scaling of nonlinearity coefficient $K_r$. For
 example, for a ReRAM cell with write current of 50uA, the write energy is
-reduced by 98.3\% when $K_r$ increases from 1 to 40. The area overhead of
+reduced by 98.3\% when $K_r$ increases from 2 to 40. The area overhead of
 the voltage drivers is illustrated in Figure~\ref{fig:E_and_A}(b). As a
 baseline design ($K_r=20$ and $I_w=40\mu A$), the driver area overhead is
 about 35\% of the area of the memory array cells. To design a memory array
@@ -87,13 +90,19 @@ F^2$ where $N_l$ is the number of layers.
 %  \caption{The normalized area overhead of voltage drivers ($K_r=20$, the areas are normalized to the area of cross-point array). }\label{fig:Area_kr20}
 %\end{figure}
 
-
 Unlike the write operation, the read operation suffers, rather than
-benefits, from scaling of nonlinearity or write current. This is because the scaling of nonlinearity and write current will reduce read
-current, degrading the read signal ratio. Figure~\ref{fig:sense_margin}(a)
-shows the read noise margin with different array sizes for the baseline
-design in Section~\ref{sec:w_and_r}.  As can be seen, the read noise margin is reduced for large array sizes. The impact of nonlinearity and write current on read noise margin is illustrated in Figure~\ref{fig:sense_margin}(b). A large $K_r$ value and small write current are harmful to the
-read noise margin. For example, given a $512 \times 512$ array, the read noise margin is less than $10mV$ for $K_r=40$ and $I_w=40\mu A$, which makes it very difficult to sense the state of the selected memory cell using traditional sense amplifiers.
+benefits, from scaling of nonlinearity or write current. This is because
+the scaling of nonlinearity and write current will reduce read current,
+degrading the read signal ratio. Figure~\ref{fig:sense_margin}(a) shows
+the read noise margin with different array sizes for the baseline design
+in Section~\ref{sec:w_and_r}.  As can be seen, the read noise margin is
+reduced for large array sizes. The impact of nonlinearity and write
+current on read noise margin is illustrated in
+Figure~\ref{fig:sense_margin}(b). A large $K_r$ value and small write
+current are harmful to the read noise margin. For example, given a $512
+\times 512$ array, the read noise margin is less than $10mV$ for $K_r=40$
+and $I_w=40\mu A$, which makes it very difficult to sense the state of the
+selected memory cell using traditional sense amplifiers.
 
 %the nonlinearity increases the resistance of half LRS and therefore the
 %resistance difference between HRS and LRS cells is reduced; on the other

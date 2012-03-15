@@ -462,16 +462,23 @@ single-bit write operation is preferred.
     \vspace{-10pt}
 \end{figure}
 
-\vspace{5pt}\noindent\textbf{Read Operation.}
-In this section we apply a similar sensing scheme as
-\cite{crossbar_NANO08_Flocke} and \cite{crossbar_TED_2010}. In order to
-read cell $R_{i,j}$, the $i^{th}$ wordline is biased at $V_{READ}$ and all of the other wordlines and bitlines are grounded. Then the state of the
-selected cell is read out by measuring the voltage across $R_s$. The
-energy consumption for a read operation can be analyzed similarly as
-a write operation. Since the read voltage is much smaller than
-write voltage, the read energy is expected to be at least one order of magnitude smaller than for a write operation. Considerable sensing margin is achieved by implementing a current-to-voltage converter and sensing the voltage signal using traditional or more recent sense amplifier designs. The input resistance of the current-to-voltage converter is extracted from HSPICE simulation results. Read sensing margin is defined as $\Delta V = \Delta I \times R_{converter}$ where $R_{converter}$ is the input resistance of the converter.
-The read reliability is determined by the voltage swing for reading HRS
-and LRS cells.
+\vspace{5pt}\noindent\textbf{Read Operation.} In this section we apply a
+similar sensing scheme as \cite{crossbar_NANO08_Flocke} and
+\cite{crossbar_TED_2010}. In order to read cell $R_{i,j}$, the $i^{th}$
+wordline is biased at $V_{READ}$ and all of the other wordlines and
+bitlines are grounded. Then the state of the selected cell is read out by
+measuring the voltage across $R_s$. The energy consumption for a read
+operation can be analyzed similarly as a write operation. Since the read
+voltage is much smaller than write voltage, the read energy is expected to
+be at least one order of magnitude smaller than for a write operation.
+Considerable sensing margin is achieved by implementing a
+current-to-voltage converter and sensing the voltage signal using
+traditional or more recent sense amplifier designs. The input resistance
+of the current-to-voltage converter is extracted from HSPICE simulation
+results. Read sensing margin is defined as $\Delta V = \Delta I \times
+R_{converter}$ where $R_{converter}$ is the input resistance of the
+converter. The read reliability is determined by the voltage swing for
+reading HRS and LRS cells.
 %In order to improve the reliability of the read operation, a two-step sensing scheme can be applied~\cite{memristor:Cong}, which senses the current of an unselected cell first, then the overall current is sensed, and after that the current difference is converted to the output voltage.
 Detailed results will be shown in Section~\ref{sec:scale}.
 
