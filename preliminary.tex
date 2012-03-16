@@ -123,11 +123,11 @@ array~\cite{crossbar_unity}~\cite{memristor:IEDM08_3D}.
 
 There are several write/read schemes for cross-point ReRAM arrays. For
 example, the write operation can write either a single-bit per access or
-several bits attached to the same wordline at the same time. Although the second
-scheme has higher bandwidth, it requires a two-step write operation to
-prevent unintentional writing~\cite{memristor:Cong}, which significantly
-increases the write latency.
-%Therefore, the write latency for the multi bit write operation is much larger than the one bit operation.
+several bits attached to the same wordline at the same time. Although the
+second scheme has higher bandwidth, it requires a two-step write method,
+where ones and zeroes need to be written separately, to prevent
+unintentional writing~\cite{memristor:Cong}, which significantly increases
+the write latency. %Therefore, the write latency for the multi bit write operation is much larger than the one bit operation.
 Furthermore, while writing to a cross-point array, the unselected wordlines
 and bitlines can be either left floating or half-biased. In contrast, while reading
 a cell, the selected wordline should be biased with a read
