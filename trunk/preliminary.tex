@@ -145,6 +145,11 @@ difference of the selected cell at HRS and LRS. Besides, the existence of
 the voltage drop along the nanowires also limits the length of wordlines
 and bitlines. Therefore, a cross-point array should be sized carefully to
 meet the requirements of the read/write reliability.
+In general, writes are more problematic than reads. 
+The read disturbance problem can be alleviated by adopting a two-level differential
+sensing scheme, in which the first level reads the background noise followed by 
+a read to data with the background current. Finally, the differential signal is
+amplified to get the data.
 %Therefore, a cross-point array should be sized carefully such that the current difference of the selected cell at HRS and LRS is large enough for reliable sensing.
 In addition to all of these write/read schemes, different cell parameters
 will also impact the reliability, energy consumption, bandwidth, and area
