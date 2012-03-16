@@ -4,6 +4,7 @@
 This section provides background of ReRAM and cross-point architecture,
 and discusses the modeling of cross-point ReRAM array.
 
+\vspace{-5pt}
 \subsection{Background of ReRAM Technology}
 %Table~\ref{table:compare} compares the properties of state-of-art
 %non-volatile memory technologies. ReRAM and STT-RAM are better than PCM or
@@ -80,6 +81,7 @@ ReRAM~\cite{ReRAM_IEDM2010_Kim,crossbar_Panasonic,ReRAM_ISSCC2011_Sheu,ReRAM_ISS
 In this study, we perform a detailed analysis of the design challenges of
 bipolar ReRAM cross-point arrays.
 
+\vspace{-5pt}
 \subsection{Cross-Point Architecture}
 There are two possible memory structures for a bipolar ReRAM array
 implementation: the traditional MOSFET-accessed structure and the
@@ -179,6 +181,7 @@ help designers make decisions early in the design flow.
 %
 %~\cite{crossbar_NANO08_Nauenheim}~\cite{memristor:analog}~\cite{moore}
 %
+\vspace{-5pt}
 \subsection{Modeling of the Cross-Point Memory}\label{sec:model}
 
 %\subsection{Basic model of Cross-Point Memory}
@@ -220,19 +223,16 @@ equations for each cross-point. Since the cross-points at the edges of the
 array have different write/read conditions, the KCL equations of these
 cross-point should be adjusted according to each write/read scheme.All of
 the KCL equations can be considered as a system of linear equations, which
-has the following form
-\begin{equation}\label{equ:matrix}
-A\cdot V = C,
-\end{equation}
-where $A$ is a ${2mn\times{2mn}}$ coefficient matrix and $C$ is a
-${2mn\times{1}}$ vector, containing the constant terms of these equations.
-Thus, with parameters such as the resistance of ReRAM cells, the
-resistance of interconnect wires, program voltages, and write/read
-schemes, voltages at various cross points can be obtained by solving the
-system of linear equations. With detailed voltage values,
-$V_{2mn{\times}1}$, we can analyze the array at a fine granularity. These
-values are also critical to evaluate the reliability, energy consumption,
-driven current density, and area overheads of a cross-point array.
+has the following form of {$ A\cdot~V~=~C $}, where $A$ is a
+${2mn\times{2mn}}$ coefficient matrix and $C$ is a ${2mn\times{1}}$
+vector, containing the constant terms of these equations. Thus, with
+parameters such as the resistance of ReRAM cells, the resistance of
+interconnect wires, program voltages, and write/read schemes, voltages at
+various cross points can be obtained by solving the system of linear
+equations. With detailed voltage values, $V_{2mn{\times}1}$, we can
+analyze the array at a fine granularity. These values are also critical to
+evaluate the reliability, energy consumption, driven current density, and
+area overheads of a cross-point array.
 
 To validate the analytical model, we compare the results with
 HSPICE~\cite{HSPICE} simulations using a resistor model in cross-point
