@@ -196,18 +196,18 @@ single-bit write operation, the worst case voltage drop occurs when
 writing the cell at the cross point of the $M^{th}$ wordline and the
 $N^{th}$ bitline with all of the other cells in the array are in
 LRS~\cite{crossbar_TED_2010}. In order to avoid write failure and
-successfully program the selected ReRAM cell, the driven voltage should be
+successfully program the selected ReRAM cell, the drive voltage should be
 boosted to a higher level, making sure that the voltage across the cell
 exceeds the threshold voltage even at the worst case.
-Figure~\ref{fig:worst_v} shows the lower bounds of the driven voltage for
+Figure~\ref{fig:worst_v} shows the lower bounds of the drive voltage for
 different sizes of cross-point array. The minimum wordline/bitline voltage
 increases from 2.01~V for a $32 \times 32$ array to nearly 7~V for a $1024
-\times 1024$ cross-point array. However, boosting the driven voltage also
+\times 1024$ cross-point array. However, boosting the drive voltage also
 increases the voltage applied at unselected cells. Therefore, a write
 disturbance may occur when the voltage applied at an unselected cell
 exceeds the threshold voltage for SET or RESET operation. According to our
 analysis, the maximum voltage applied at unselect cells is exactly the
-same as half of the driven voltage. Thus, only arrays with driven voltage
+same as half of the drive voltage. Thus, only arrays with drive voltage
 less than 4V are allowable. Otherwise, the array is unreliable because it
 cannot avoid write failure and write disturbance at the same time. The
 unreliable array sizes are denoted as red bars in
@@ -352,7 +352,7 @@ ideal cell size of $4F^2$.
 Although whole-wordline write operation has the advantage of lower energy
 consumption, the maximum current requirement for each wordline also
 increases. As demonstrated in Figure~\ref{fig:drive_i}(b), although the
-maximum driven current for each bitline is almost the same as when writing
+maximum drive current for each bitline is almost the same as when writing
 one bit, the driving current requirement for each wordline in a
 whole-wordline  write scheme is $>10$ times larger than that of a
 single-bit write scheme. Since the area of the voltage driver increases
@@ -383,7 +383,7 @@ overhead, single-bit write operation is preferred.
 \centering
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.5\textwidth]{./figures/drive_i_f.pdf}\\
-  \caption{The requirements for wordline and bitline driven currents. (a) One bit per write. (b) One wordline per write.}\label{fig:drive_i}
+  \caption{The requirements for wordline and bitline drive currents. (a) One bit per write. (b) One wordline per write.}\label{fig:drive_i}
   \vspace{-10pt}
 \end{figure}
 
