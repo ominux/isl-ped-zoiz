@@ -1,4 +1,4 @@
-\vspace{-4pt}
+
 \section{Analysis of Design Constraints - A Case Study}\label{sec:w_and_r}
 
 In this section, we study the effect of various schemes on cross-point
@@ -7,7 +7,7 @@ on array size, energy consumption and area overhead in worst case
 scenarios. The results of this study will be useful when designing a
 cross-point array.
 
-\vspace{-10pt}
+\vspace{-5pt}
 \subsection{Overview}
 %As shown in Figure~\ref{fig:modeling}, i
 In order to write or read a cross-point array, proper voltages should be
@@ -75,6 +75,7 @@ current is presented in Section~\ref{sec:scale}.
   \vspace{-10pt}
 \end{table}
 
+\vspace{-5pt}
 \subsection{Write Operation}
 To write a ReRAM cell, an external voltage is applied across the cell for
 a certain duration. Intuitively, there are four possible schemes for the
@@ -89,10 +90,10 @@ and half biases the unselected wordlines and bitlines. However, the FWFB
 scheme has an inherent problem that may result in severe write
 disturbance~\cite{crossbar_NANO2003_Ziegler}. Therefore, in the following
 discussion, we only compare the results of the FWHB, HWFB and HWHB
-schemes. For each of these three schemes, we can either write several
-cells on one wordline at the same time (multi-bit write) or write only one
-bit per access (single-bit write) and distribute the write operation to
-several arrays.
+schemes. For each of these schemes, we can either write several cells on
+one wordline at the same time (multi-bit write) or write only one bit per
+access (single-bit write) and distribute the write operation to several
+arrays.
 %Since several potential read/write schemes can be used to program a memory array, it is difficult to identify the ideal scheme that meets the design constraints in terms of area, energy, and reliability.
 %However, the FWFB scheme has inherent problem that may result in severe
 %write disturbance. For example, for writing a ReRAM cell located at the
@@ -218,7 +219,7 @@ FWFB, HWFB and FWHB schemes have the same minimum driven voltage.
 \centering
 \hspace{-5pt}
   % Requires \usepackage{graphicx}
-  \includegraphics[width=0.4\textwidth]{./figures/worst_v_f1.pdf}\\
+  \includegraphics[width=2.6 in]{./figures/worst_v_f1.pdf}\\
   \caption{Required write voltages for different cross-point arrays (threshold voltage = 2V.). }\label{fig:worst_v}
   \vspace{-5pt}
 \end{figure}
@@ -316,7 +317,7 @@ reduced.
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.5\textwidth]{./figures/energy_f_tall2.pdf}\\
   \caption{The normalized energy consumption with different array size. (a) Single-bit writing. (b) Multi-bit writing.}\label{fig:energy}
-    \vspace{-10pt}
+    \vspace{-5pt}
 \end{figure}
 
 \vspace{5pt}\noindent\textbf{Write Current and Area Overhead of Write Operations.}
@@ -350,12 +351,12 @@ the peripheral circuitry area is much larger than that of the array. In
 this case, the total area of the memory array is dominated by the
 peripheral circuitry rather than the cells. In addition to the extra area
 overhead, writing multiple bits at one time also worsens the voltage drop
-along the wordline. As shown in Figure~\ref{fig:reliable_region}, in order
-to write an entire wordline when writing, the maximum reliable array size
-reduces from $800 \times 800$ to $352 \times 352$. This is because the
-current passing through the interconnect wires in the multi-bit write
-scheme is much larger than that of the single-bit write scheme, causing
-more severe voltage drops on the wire resistance.
+along the wordline. Our simulation results show that, in order to program
+an entire wordline when writing, the maximum reliable array size reduces
+from $800 \times 800$ to $352 \times 352$. This is because the current
+passing through the interconnect wires in the multi-bit write scheme is
+much larger than that of the single-bit write scheme, causing more severe
+voltage drops on the wire resistance.
 
 Therefore, we conclude that although the multi-bit write operation is more
 energy efficient, from the standpoint of reliability and area overhead,
@@ -371,6 +372,7 @@ single-bit write operation is preferred.
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.5\textwidth]{./figures/drive_i_f.pdf}\\
   \caption{The requirements for wordline and bitline driven currents. (a) One bit per write. (b) One wordline per write.}\label{fig:drive_i}
+  \vspace{-10pt}
 \end{figure}
 
 
@@ -451,13 +453,14 @@ single-bit write operation is preferred.
 %    \vspace{-10pt}
 %\end{figure}
 
-\begin{figure}%[!t]
-\centering\label{fig:multiV}
-  % Requires \usepackage{graphicx}
-  \includegraphics[width=0.25\textwidth]{./figures/multi_V_one.pdf}\\
-  \caption{Worst case select voltage and write voltage requirements for multi-bit writing (one wordline per write).}\label{fig:reliable_region}
-    \vspace{-10pt}
-\end{figure}
+%\begin{figure}%[!t]
+%\centering\label{fig:multiV}
+%  % Requires \usepackage{graphicx}
+%  \includegraphics[width=0.25\textwidth]{./figures/multi_V_one.pdf}\\
+%  \vspace{-10pt}
+%  \caption{Worst case select voltage and write voltage requirements for multi-bit writing (one wordline per write).}\label{fig:reliable_region}
+%    \vspace{-10pt}
+%\end{figure}
 
 \vspace{5pt}\noindent\textbf{Read Operation.} In this section we apply a
 similar sensing scheme as \cite{crossbar_NANO08_Flocke} and

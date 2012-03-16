@@ -37,7 +37,7 @@
 \newcommand{\squishlistindent}{
    \begin{list}{$\bullet$}
     { \setlength{\itemsep}{0pt}      \setlength{\parsep}{0pt}
-      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\topsep}{2.5pt}       \setlength{\partopsep}{0pt}
       \setlength{\listparindent}{-2pt}
       %\setlength{\itemindent}{-5pt}
       \setlength{\itemindent}{20pt}
@@ -48,8 +48,8 @@
     \end{list}  }
 
 \begin{document}
-\title{\huge\vspace{-0pt} Design Trade-Offs for High Density Cross-Point Resistive Memory}
-\maketitle \vspace{-20pt}
+\title{\huge\vspace{-10pt} Design Trade-Offs for High Density Cross-Point Resistive Memory}
+\maketitle \vspace{-25pt}
 \input{intro}
 \input{preliminary}
 %\input{model}
@@ -57,10 +57,13 @@
 \input{scale}
 \input{macro}
 \input{conclusion}
-\vspace{5pt}
+\vspace{-10pt}
+
 \bibliographystyle{ieeetran}
+\begin{scriptsize}
 \bibliography{./bib/crossbar,./bib/memristor,./bib/mis,./bib/ReRAM}
-\vspace{5pt}
+\end{scriptsize}
+%\vspace{5pt}
 %\end{spacing}
 %\end{scriptsize}
 %\vspace{10pt}
