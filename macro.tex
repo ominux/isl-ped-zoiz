@@ -1,16 +1,17 @@
 \vspace{-5pt}
 \section{A Case Study of Cross-point ReRAM Macro Design}\label{sec:macro}
-Since the array size of a cross-point ReRAM array is strictly limited by
-reliability requirements, the design of a ReRAM macro is greatly different
-from the traditional DRAM design. A cross-point ReRAM macro is implemented
-by establishing a large amount of small cross-point arrays with
-appropriate peripheral circuity and organizations. In this section, we
-evaluate the area, energy consumption, and bandwidth of a 256 Mbits ReRAM
-macro.
-We use an organization similar to Kawahara's design~\cite{crossbar_Panasonic}.
+Since the array size of a cross-point ReRAM array is limited by
+reliability requirements, the design of a ReRAM macro is different
+from the traditional DRAM design. 
+%A cross-point ReRAM macro is implemented
+%by connecting a number of small cross-point arrays with
+%appropriate peripheral circuity and organizations. 
+In this section, we evaluate the area, energy consumption, and bandwidth of a
+256 Mbits ReRAM macro.
+We use an organization similar to Kawahara's design~\cite{crossbar_Panasonic}, where
 %We apply the similar memory organization as Kawahara's
 %work~\cite{crossbar_Panasonic}. 
-The 256 Mbits ReRAM macro is divided into 
+a 256 Mbits ReRAM macro is divided into 
 eight planes. Each 32~Mbit plane has separate wordline
 decoder, bitline selectors, sense amplifiers, and write circuity. Due to
 space constraints, we present results for only
