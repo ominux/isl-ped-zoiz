@@ -28,19 +28,23 @@ bandwidth also has the similar trend as area and energy consumption. This
 observation implies that we have to either sacrifice the area efficiency
 or increase the energy budget to improve the bandwidth of the ReRAM macro.
 
-The bandwidth-per-Joule is another important measurement of the energy
-efficiency of the memory macro. Figure~\ref{fig:EpJ} shows the
-bandwidth-per-Joule of the ReRAM macro. For a certain ReRAM cell, the
-single-bit write operation always has the best bandwidth-per-Joule value.
-It is because the multi-bit write operation requires a two-step write
-method, which almost doubles the latency of write operation and therefore
-impact the bandwidth-per-Joule value. Besides, for the multi-bit write
-operation, the bandwidth-per-Joule do not increase monotonically with the
-increase of the number of bit per write. According to
-Figure~\ref{fig:EpJ}, an optimal write scheme exists for each of the
-different cell parameters. For example, for our baseline design with
-$Kr=20$ and $I_w=40uA$, write 32 bits per access will result in the best
-bandwidth-per-Joule value. Therefore, to design a bandwidth-per-Joule
+We also investigated three other important design metrics: bandwidth per
+nanojoule ($BW/nJ$), bandwidth per square millimeter($BW/mm^2$), as well
+as bandwidth per nanojoule per square millimeter ($BW/(nJ\cdot mm^2)$).
+
+ The bandwidth-per-Joule is another important
+measurement of the energy efficiency of the memory macro.
+Figure~\ref{fig:EpJ} shows the bandwidth-per-Joule of the ReRAM macro. For
+a certain ReRAM cell, the single-bit write operation always has the best
+bandwidth-per-Joule value. It is because the multi-bit write operation
+requires a two-step write method, which almost doubles the latency of
+write operation and therefore impact the bandwidth-per-Joule value.
+Besides, for the multi-bit write operation, the bandwidth-per-Joule do not
+increase monotonically with the increase of the number of bit per write.
+According to Figure~\ref{fig:EpJ}, an optimal write scheme exists for each
+of the different cell parameters. For example, for our baseline design
+with $Kr=20$ and $I_w=40uA$, write 32 bits per access will result in the
+best bandwidth-per-Joule value. Therefore, to design a bandwidth-per-Joule
 efficient ReRAM macro, the optimal scheme should be carefully decided.
 
 
@@ -76,23 +80,3 @@ efficient ReRAM macro, the optimal scheme should be carefully decided.
   \caption{Bandwidth-per-Joule of 256 Mbits ReRAM macro.}
   \vspace{-15pt}
 \end{figure}
-%\begin{table}
-%\begin{tabular}{|l|l||l|l|l|l|l|l|l|l|}
-%\hline
-%\multicolumn{8}{|c|}{Num of bit per write}\\
-%$Kr$ & $I_w$ & 1 & 2 & 4 & 8 & 16 & 32 & 64 & 128 \\\hline
-%\multirow{3}{*}{20} & \multirow{3}{*}{20} & & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\
-%& ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~
-%& ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~\\\hline
-%20 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%20 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%20 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%40 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%40 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%40 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%40 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%40 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%40 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\\hline
-%40 & 200 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\
-%\end{tabular}
-%\end{table}
