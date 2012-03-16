@@ -83,19 +83,22 @@ bipolar ReRAM cross-point arrays.
 
 \vspace{-5pt}
 \subsection{Cross-Point Architecture}
-There are two possible memory structures for a bipolar ReRAM array
-implementation: the traditional MOSFET-accessed structure and the
-cross-point structure. In the MOSFET-accessed memory array, a MOSFET is
+There are two possible memory structures for a bipolar ReRAM array: 
+the traditional MOSFET-accessed structure and the
+cross-point structure. In the former case, a dedicated MOSFET is
 used as an access device for each memory cell. As the size of a MOSFET
 access device is typically much larger than the size of a ReRAM cell, the
 total area of memory array is primarily dominated by MOSFETs rather than
-ReRAM cells. Also, in order to provide enough driven current, larger than
+ReRAM cells. Also, in order to provide enough drive current, larger than
 minimum-sized transistor should be used for write operations. Hence,
-ReRAM's area advantage gets lost because of the access devices.
+ReRAM's area advantage goes down significantly because of the access devices.
 %The ReRAM's advantage of ultra small cell size will be offset by the access device.
-Fortunately, the access device can be eliminated due to the large
-current-voltage (I-V) nonlinearity of some ReRAM
-devices~~\cite{memristor:switch,memristor:Unity}. The I-V characteristic
+Fortunately, we can exploit the non-linear I-V characteristic of some 
+ReRAM devices to eliminate the access device~\cite{memristor:switch,memristor:Unity}. 
+%Fortunately, the access device can be eliminated due to the large
+%current-voltage (I-V) nonlinearity of some ReRAM
+%devices~~\cite{memristor:switch,memristor:Unity}. 
+The I-V characteristic
 demonstrated in these fabricated devices shows that the resistance of
 ReRAM significantly increases as the voltage applied on it decreases. Such
 observation basically indicates effective cut off of the leakage current
@@ -121,14 +124,13 @@ array~\cite{crossbar_unity}~\cite{memristor:IEDM08_3D}.
 \vspace{-12pt}
 \end{figure}
 
-There are several write/read schemes for cross-point ReRAM arrays. For
-example, the write operation can write either a single-bit per access or
-several bits attached to the same wordline at the same time. Although the
-second scheme has higher bandwidth, it requires a two-step write method,
-where ones and zeroes need to be written separately, to prevent
-unintentional writing~\cite{memristor:Cong}, which significantly increases
-the write latency. %Therefore, the write latency for the multi bit write operation is much larger than the one bit operation.
-Furthermore, while writing to a cross-point array, the unselected wordlines
+Although avoiding access transistor is beneficial from cell area standpoint, it
+introduces other complexities. Following the traditional writing method in which all 
+the bits activated by a wordline are written at once, now needs two steps 
+to prevent unintentional writing~\cite{memristor:Cong}. An alternate way is
+to write one bit at a time but this requires interleaving data across multiple
+arrays to reduce write latency.
+Also, while writing to a cross-point array, the unselected wordlines
 and bitlines can be either left floating or half-biased. In contrast, while reading
 a cell, the selected wordline should be biased with a read
 voltage and all the other wordlines and bitlines in the array are shunted
@@ -136,7 +138,6 @@ to ground. The current in each bitline is then sensed and compared to a
 reference current to determine the cell content. However, due to the sneak
 current existing in the cross-point array, the current in bitlines also
 varies depending upon the data patterns of unselected cells.
-%is impacted significantly by the data pattern of the unselected cells in the array.
 This read disturbance restricts the size of a cross-point array, since
 sneak current increases as the number of cells attached to wordlines and
 bitlines increases, which makes it difficult to sense the current
@@ -231,7 +232,7 @@ interconnect wires, program voltages, and write/read schemes, voltages at
 various cross points can be obtained by solving the system of linear
 equations. With detailed voltage values, $V_{2mn{\times}1}$, we can
 analyze the array at a fine granularity. These values are also critical to
-evaluate the reliability, energy consumption, driven current density, and
+evaluate the reliability, energy consumption, drive current density, and
 area overheads of a cross-point array.
 
 To validate the analytical model, we compare the results with
