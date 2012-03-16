@@ -1,5 +1,5 @@
 \vspace{-5pt}
-\section{Cross-point ReRAM Macro Design??}\label{sec:macro}
+\section{A Case Study of Cross-point ReRAM Macro Design}\label{sec:macro}
 Since the array size of a cross-point ReRAM array is strictly limited by
 reliability requirements, the design of a ReRAM macro is greatly different
 from the traditional DRAM design. A cross-point ReRAM macro is implemented
@@ -31,22 +31,31 @@ or increase the energy budget to improve the bandwidth of the ReRAM macro.
 We also investigated three other important design metrics: bandwidth per
 nanojoule ($BW/nJ$), bandwidth per square millimeter($BW/mm^2$), as well
 as bandwidth per nanojoule per square millimeter ($BW/(nJ\cdot mm^2)$).
-
- The bandwidth-per-Joule is another important
-measurement of the energy efficiency of the memory macro.
-Figure~\ref{fig:EpJ} shows the bandwidth-per-Joule of the ReRAM macro. For
-a certain ReRAM cell, the single-bit write operation always has the best
-bandwidth-per-Joule value. It is because the multi-bit write operation
-requires a two-step write method, which almost doubles the latency of
-write operation and therefore impact the bandwidth-per-Joule value.
-Besides, for the multi-bit write operation, the bandwidth-per-Joule do not
-increase monotonically with the increase of the number of bit per write.
-According to Figure~\ref{fig:EpJ}, an optimal write scheme exists for each
-of the different cell parameters. For example, for our baseline design
-with $Kr=20$ and $I_w=40uA$, write 32 bits per access will result in the
-best bandwidth-per-Joule value. Therefore, to design a bandwidth-per-Joule
-efficient ReRAM macro, the optimal scheme should be carefully decided.
-
+Bandwidth per nanojoule reflects the energy efficiency on the bandwidth.
+The higher the bandwidth and the less amount of energy used to achieve a
+larger values of this metric. Besides, since the area is directly related
+to the cost, bandwidth per square millimeter is a good indicator of the
+economics of the bandwidth. As shown in Figure~\ref{fig:BWpAE} the
+bandwidth per nanojoule for single-bit write is always better than that
+for multi-bit write operation. Besides, there also exist a optimal number
+of bits per write for multi-bit write schemes: 32 bits for the cell with
+Kr=20, and 8 bits for cells with Kr=40. However, from the bandwidth per
+square millimeter point of view, the cells with different write current
+have different situation: for cells with large write current
+($I_w=200uA$), optimal number of bits per write is 16 bits. On the other
+hand, if the write current scales to $40uA$, the bandwidth per square
+millimeter increases monotonically with the increase of write bit number,
+and the large number of bit per write is favorable. The reason for this
+different is that, for the cell with large write current, the wordline
+drivers and bitline multiplexors can no longer be hidden underneath the
+array, which impact the area efficiency of the entire macro.
+Figure~\ref{fig:BWpAE2} shows the bandwidth per nanojoule per square
+millimeter results. Similarly, this metric also has a optimal number of
+bits per write for different cells: 8 bits for the cell with Kr=20, and 4
+bits for cells with Kr=40. However, we should note that, even for the same
+ReRAM cell, the ``sweet spot'' for different metric is different.
+Therefore, we can conclude that the optimal configuration varies with the
+optimization target($BW/nJ$, $BW/mm^2$, or $BW/(nJ\cdot mm^2)$).
 
 %\begin{figure}[!t]
 %\centering\label{fig:aaable}
