@@ -7,8 +7,9 @@ on array size, energy consumption and area overhead in worst case
 scenarios. The results of this study will be useful when designing a
 cross-point array.
 
-\vspace{-5pt}
+\vspace{-9pt}
 \subsection{Overview}
+\vspace{-2pt}
 %As shown in Figure~\ref{fig:modeling}, i
 In order to write or read a cross-point array, proper voltages should be
 applied across the ReRAM cell. Although the goal of a read operation is
@@ -72,10 +73,10 @@ current is presented in Section~\ref{sec:scale}.
     \textbf{$M,N$} & Number of wordlines/bitlines &\textbf{$512$~~($8\sim1024$)} \\
     \hline
   \end{tabular}
-  \vspace{-10pt}
+  \vspace{-15pt}
 \end{table}
 
-\vspace{-5pt}
+\vspace{-9pt}
 \subsection{Write Operation}
 To write a ReRAM cell, an external voltage is applied across the cell for
 a certain duration. Intuitively, there are four possible schemes for the
@@ -140,7 +141,7 @@ operation is discussed in Section~\ref{sec:macro}.
 %combine all constraints to provide design guidelines for write operations.
 
 
-\vspace{5pt}\noindent\textbf{Reliable Write Operations.} Write reliability
+\vspace{3pt}\noindent\textbf{Reliable Write Operations.} Write reliability
 is a serious concern in cross-point arrays. In an ideal condition, the
 resistance of wires and the sneak currents in unselected cells are
 negligible. In such a scenario, all the write schemes discussed above can
@@ -233,7 +234,7 @@ bitline.
   % Requires \usepackage{graphicx}
   \includegraphics[width=2.6 in]{./figures/worst_v_f1.pdf}\\
   \caption{Required write voltages for different cross-point arrays (threshold voltage = 2V.). }\label{fig:worst_v}
-  \vspace{-5pt}
+  \vspace{-10pt}
 \end{figure}
 
 %
@@ -267,7 +268,7 @@ bitline.
 %\end{figure}
 
 
-\vspace{5pt}\noindent\textbf{Energy Consumption of Write Operations.}
+\vspace{3pt}\noindent\textbf{Energy Consumption of Write Operations.}
 %
 %The energy consumption of a write operation for a cross-point array can be calculated as:
 %\begin{equation}
@@ -326,12 +327,13 @@ for one bit is therefore reduced.
 \begin{figure}%[!t]
 \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[width=0.5\textwidth]{./figures/energy_f_tall2.pdf}\\
+  \includegraphics[width=0.5\textwidth]{./figures/energy_f_tall2.pdf}\\ \vspace{-5pt}
   \caption{The normalized energy consumption with different array size. (a) Single-bit writing. (b) Whole-wordline writing.}\label{fig:energy}
-    \vspace{-15pt}
+    \vspace{-18pt}
 \end{figure}
 
-\vspace{5pt}\noindent\textbf{Write Current and Area Overhead of Write Operations.}
+\vspace{3pt}\noindent\textbf{Write Current and Area Overhead of Write
+Operations.}
 %\vspace{6pt}
 %
 The write operation for a $M \times N$ array requires $M$ wordline voltage
@@ -382,9 +384,9 @@ overhead, single-bit write operation is preferred.
 \begin{figure}%[!t]
 \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[width=0.5\textwidth]{./figures/drive_i_f.pdf}\\
+  \includegraphics[width=0.5\textwidth]{./figures/drive_i_f.pdf}\\  \vspace{-5pt}
   \caption{The requirements for wordline and bitline drive currents. (a) One bit per write. (b) One wordline per write.}\label{fig:drive_i}
-  \vspace{-10pt}
+  \vspace{-5pt}
 \end{figure}
 
 
@@ -392,7 +394,7 @@ overhead, single-bit write operation is preferred.
 \begin{figure}%[!t]
 \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[width=0.5\textwidth]{./figures/area_comp_f1.pdf}\\
+  \includegraphics[width=0.5\textwidth]{./figures/area_comp_f1.pdf}\\  \vspace{-10pt}
   \caption{Area overhead comparison. (a) Single-bit write. (b) Whole-wordline write.}\label{fig:area_i}
 \vspace{-15pt}
 \end{figure}
@@ -474,7 +476,7 @@ overhead, single-bit write operation is preferred.
 %    \vspace{-10pt}
 %\end{figure}
 
-\vspace{5pt}\noindent\textbf{Read Operation.} In this section we apply a
+\vspace{3pt}\noindent\textbf{Read Operation.} In this section we apply a
 similar sensing scheme as \cite{crossbar_NANO08_Flocke} and
 \cite{crossbar_TED_2010}. In order to read cell $R_{i,j}$, the $i^{th}$
 wordline is biased at $V_{READ}$ and all of the other wordlines and
