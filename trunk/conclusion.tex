@@ -6,18 +6,23 @@
 %inherent in the cross-point structure, such as the existence of sneak
 %current and voltage drops along the wires introduce challenges to the
 %design of reliable ReRAM cross-point memory arrays.
-In this paper, we use a mathematical model to study in detail how
-reliability affects the array organization, size, energy consumption, and
-area overheads of cross-point arrays. The simulation results show that
-multi-bit write operation is more energy efficient than single-bit write
-operation, and therefore is more suitable for energy-constrained design.
-However, for an area-constrained design, single-bit write operation is
-better. Besides, we point out that both increasing nonlinearity and
-scaling of write current of the ReRAM cell can reduce the energy
-consumption and area overhead significantly, and it is favorable for
-large, energy efficient ReRAM design. According to our macro-level
-analysis, we figure out that we have to either sacrifice the area
-efficiency or increase the energy budget to improve the bandwidth of the
-ReRAM macro. In addition, for different optimization target (bandwidth per
-nanojoule, bandwidth per square millimeter, and bandwidth per nanojoule),
-a optimal number of bits per write exists.
+In this paper, we use a mathematical model to study in detail how reliability
+affects the array organization, size, energy consumption, and area overheads of
+cross-point arrays.  The size of a cross-point is limited by the peripheral
+circuit overhead and sneak current.  Our simulation results show that with best
+possible device non-linearity and drive current, the maximum array size cannot
+exceed 1024x1024 without compromising reliability.  We also showed that
+multi-bit writes is more energy efficient than single-bit write, however, the
+latter significantly reduces the complexity of peripheral circuits and provides
+better area efficiency.  Both high nonlinearity and low write current are key
+to reduce energy and area of cross-point arrays.  Finally, since memory
+bandwidth is an important design constraint, we studied various designs that
+maximizes bandwidth for a given area and energy budget.  Through our case
+study, we show that there is an optimal word size for a given device parameter
+that has the best energy, area, and bandwidth properties. 
+%  According to our macro-level
+%analysis, we figure out that we have to either sacrifice the area
+%efficiency or increase the energy budget to improve the bandwidth of the
+%ReRAM macro. In addition, for different optimization target (bandwidth per
+%nanojoule, bandwidth per square millimeter, and bandwidth per nanojoule),
+%a optimal number of bits per write exists.
