@@ -83,7 +83,7 @@ bipolar ReRAM cross-point arrays.
 
 \vspace{-5pt}
 \subsection{Cross-Point Architecture}
-There are two possible memory structures for a bipolar ReRAM array: 
+There are two possible memory structures for a bipolar ReRAM array:
 the traditional MOSFET-accessed structure and the
 cross-point structure. In the former case, a dedicated MOSFET is
 used as an access device for each memory cell. As the size of a MOSFET
@@ -93,11 +93,11 @@ ReRAM cells. Also, in order to provide enough drive current, larger than
 minimum-sized transistor should be used for write operations. Hence,
 ReRAM's area advantage goes down significantly because of the access devices.
 %The ReRAM's advantage of ultra small cell size will be offset by the access device.
-Fortunately, we can exploit the non-linear I-V characteristic of some 
-ReRAM devices to eliminate the access device~\cite{memristor:switch,memristor:Unity}. 
+Fortunately, we can exploit the non-linear I-V characteristic of some
+ReRAM devices to eliminate the access device~\cite{memristor:switch,memristor:Unity}.
 %Fortunately, the access device can be eliminated due to the large
 %current-voltage (I-V) nonlinearity of some ReRAM
-%devices~~\cite{memristor:switch,memristor:Unity}. 
+%devices~~\cite{memristor:switch,memristor:Unity}.
 The I-V characteristic
 demonstrated in these fabricated devices shows that the resistance of
 ReRAM significantly increases as the voltage applied on it decreases. Such
@@ -118,15 +118,15 @@ array~\cite{crossbar_unity}~\cite{memristor:IEDM08_3D}.
 \begin{figure}
 \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[width=2.5in]{./figures/crossbar_array2.pdf}\\\vspace{-10pt}
+  \includegraphics[width=3in]{./figures/crossbar_array2.pdf}\\\vspace{-10pt}
   \caption{A schematic view of a typical cross-point array. (a) The perspective of the cross-point array.
   (b) The top view of the array, from which we can clearly see that the size of each cell is $4F^2$. }\label{fig:array}
 \vspace{-12pt}
 \end{figure}
 
 Although avoiding access transistor is beneficial from cell area standpoint, it
-introduces other complexities. Following the traditional writing method in which all 
-the bits activated by a wordline are written at once, now needs two steps 
+introduces other complexities. Following the traditional writing method in which all
+the bits activated by a wordline are written at once, now needs two steps
 to prevent unintentional writing~\cite{memristor:Cong}. An alternate way is
 to write one bit at a time but this requires interleaving data across multiple
 arrays to reduce write latency.
@@ -145,9 +145,9 @@ difference of the selected cell at HRS and LRS. Besides, the existence of
 the voltage drop along the nanowires also limits the length of wordlines
 and bitlines. Therefore, a cross-point array should be sized carefully to
 meet the requirements of the read/write reliability.
-In general, writes are more problematic than reads. 
+In general, writes are more problematic than reads.
 The read disturbance problem can be alleviated by adopting a two-level differential
-sensing scheme, in which the first level reads the background noise followed by 
+sensing scheme, in which the first level reads the background noise followed by
 a read to data with the background current. Finally, the differential signal is
 amplified to get the data.
 %Therefore, a cross-point array should be sized carefully such that the current difference of the selected cell at HRS and LRS is large enough for reliable sensing.
@@ -215,7 +215,7 @@ $i^{th}$ wordline is represented as $V'_{Wi}$.
 \begin{figure}%[!hb]
 \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[width=2.5in]{./figures/model_f.pdf}\\
+  \includegraphics[width=3in]{./figures/model_f.pdf}\\
   \vspace{-8pt}
   \caption{The circuit model of the cross-point array.}\label{fig:modeling}
   \vspace{-4pt}
@@ -250,7 +250,7 @@ HSPICE simulation results.
 \begin{figure}%[!t]
 \centering\label{fig:SPICE}
   % Requires \usepackage{graphicx}
-  \includegraphics[width=0.5\textwidth]{./figures/SPICE1.pdf}\\
+  \includegraphics[width=0.5\textwidth]{./figures/SPICE1.pdf}\\    \vspace{-5pt}
   \caption{Validation of the analytical model against SPICE simulation. The two figures show the voltage drops obtained from our model and SPICE (a) with a nonlinearity factor of 5 and (b) without nonlinearity.}\label{fig:validation}
     \vspace{-10pt}
 \end{figure}
